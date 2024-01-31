@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>   <!-- Boxicons -->
+</head>
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Codinglab</span>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="../Homepage/index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Examples</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Services</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Course</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-contact'></i>
+                            <span class="text nav-text">Contact us</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+
+
+
+
+
+
+    <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle">My favorite skills</span>
+        
+        <div class="skills__container container grid section__border">
+            
+            <div class="skills__content">
+                <h3 class="skills__title">
+                    <i class="ri-braces-line"></i> Frontend Developer
+                </h3>
+
+                <div class="skills__info">
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/html-1.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">HTML</h3>
+                        <span class="skills__subtitle">Intermediate</span>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/css-3.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">CSS</h3>
+                        <span class="skills__subtitle">Intermediate</span>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/logo-javascript.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">JavaScript</h3>
+                        <span class="skills__subtitle">Junior</span>
+                    </div>
+                    
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/git-icon.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">Git</h3>
+                        <span class="skills__subtitle">Basic</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills__content">
+                <h3 class="skills__title">
+                    <i class="ri-pantone-line"></i>Web Designer
+                </h3>
+
+                <div class="skills__info">
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/figma-1.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">Figma</h3>
+                        <span class="skills__subtitle">Basic</span>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/sketch-2.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">Sketch</h3>
+                        <span class="skills__subtitle">Basic</span>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/adobe-xd-1.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">Adobe XD</h3>
+                        <span class="skills__subtitle">Basic</span>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/invision.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">InvisionApp</h3>
+                        <span class="skills__subtitle">Basic</span>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__blob">
+                            <img src="img-services-skills/adobe-photoshop-2.svg" alt="skills image">
+                        </div>
+
+                        <h3 class="skills__name">Photoshop</h3>
+                        <span class="skills__subtitle">Basic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

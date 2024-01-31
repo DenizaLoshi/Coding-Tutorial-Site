@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>   <!-- Boxicons -->
+    <title>DnA-HTML-Basics</title> 
+    <script src="js/main.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../img/Logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name"></span>
+                    <span class="profession">Coding Tutorial</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="../Homepage/index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Examples</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../Servicess/index.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Services</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../Course/index.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Course</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../contact us/index.html">
+                            <i class='bx bxs-contact'></i>
+                            <span class="text nav-text">Contact us</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="../Homepage/index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+
+    <div class="container">
+        <h1>HTML Basics</h1> 
+        <br>
+        <p>HTML (HyperText Markup Language) is a markup language used to structure and organize the content on a web page. <br> It uses various tags to define the different elements on a page, such as headings, paragraphs, and links.</p>
+        <br> <hr>
+        <br><br><br>
+
+        <h1>HTML Hierarchy</h1>
+        <br>
+        <p>HTML elements are hierarchical, which means that they can be nested inside each other to create a tree-like structure <br> of the content on the web page. <br>
+        This hierarchical structure is called the DOM (Document Object Model), and it is used by the web browser to render the <br> web page. For example,</p>
+        <br><br>
+        <img src="../img/html-example-1.PNG" alt="">
+        <br><br>
+        <p>
+            <strong>Browser Output</strong>
+        </p>
+        <br><br>
+        <img src="../img/html-basics-hierarchy.png" alt="">
+
+        <p>In this example, the <code>html</code> element is the root element of the hierarchy and contains two child elements: <code>head</code> and <code>body</code>. The head element, in turn, contains a child element called the <code>titleV, and the <code>body</code> element contains child elements: <code>h1</code> and <code>p</code>.
+            <br>
+            <br>
+        Let's see the meaning of the various elements used in the above example.</p>
+            <br>
+            <ul class="ul-example">
+                <li><code>&lt;html&gt;</code>: the root element of the DOM, and it contains all of the other elements in the code</li>
+                <li><code>&lt;head&gt;</code>: contains metadata about the web page, such as the title and any linked CSS or JavaScript files</li>
+                <li><code>&lt;title&gt;</code>: contains the title of the web page, which will be displayed in the web browser's title bar or tab</li>
+                <li><code>&lt;body&gt;</code>: contains the main content of the web page, which will be displayed in the web browser's window</li>
+                <li><code>&lt;p&gt;</code>: contains the paragraphs of text on the web page</li>
+                <li><code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>: child elements of the <code>&lt;p&gt;</code> elements, they are used to mark text as important and emphasized respectively</li>
+            </ul>    
+            <br><br>
+
+            <p class="note-tip">
+                <strong>Note</strong>: Only the elements inside the <code>&lt;body&gt;</code> tag renders in the web browser. 
+            </p>
+            <br>
+            <hr>
+            <h1>What are HTML elements?</h1>
+            <br><br><br><br>
+            <p>HTML elements consist of several parts, including the opening and closing tags, the content, and the attributes. Here is an explanation of each of these parts:</p>
+            <br><br>
+            <img src="../img/basics-elements-in-html.png" alt="">
+            <br><br>
+            <p>Here,</p>
+            <br>
+            <ul class="ul-example2">
+                <li><strong>The opening tag</strong>: This consists of the element name, wrapped in angle brackets. It indicates the start of the element and the point at which the element's effects begin.</li>
+                <br>
+                <li><strong>The closing tag</strong>: This is the same as the opening tag, but with a forward slash before the element name. It indicates the end of the element and the point at which the element's effects stop.</li>
+                <br>
+                <li><strong>The content</strong>: This is the content of the element, which can be text, other elements, or a combination of both.</li>
+                <br>
+                <li><strong>The element:</strong> The opening tag, the closing tag, and the content together make up the element. </li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+    </div>
+</body>
+</html>
